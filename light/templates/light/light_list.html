@@ -1,0 +1,23 @@
+{% extends "light/base.html" %}
+{% block content %}
+  <section class="light-list">
+      {% for light in object_list %}
+      <div id="{{ light.id }}-display">
+        <div>
+          {% if light.status == '0' %}
+          <i class="far fa-lightbulb"></i>
+          <label class="checkbox-inline">
+            <input data-toggle="toggle" type="checkbox">
+          </label>
+          {% else %}
+          <i class="fas fa-lightbulb yellow"></i>
+          <label class="checkbox-inline">
+            <input data-toggle="toggle" type="checkbox" checked>
+          </label>
+          {% endif %}
+        </div>
+        {# </form> #}
+      </div>
+      {% endfor %}
+  </section>
+{% endblock %}

@@ -1,0 +1,36 @@
+body {
+  // background-color: lightgrey;
+}
+section.light-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  div {
+    div {
+      height: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 5em;
+      i {
+        margin: 0 1em;
+      }
+      i.yellow {
+        color: yellow;
+      }
+      label {
+        label.btn.btn-default.active.toggle-off {
+          background-color: black;
+          color: white;
+        }
+        label.btn.btn-primary.toggle-on {
+        }
+        span.toggle-handle.btn.btn-default {
+          background-color: lightgrey;
+        }
+      }
+    }
+  }
+}

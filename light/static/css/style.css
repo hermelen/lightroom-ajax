@@ -1,0 +1,2 @@
+section.light-list{width:100%;display:flex;justify-content:space-between;flex-wrap:wrap}section.light-list div div{height:2em;display:flex;flex-direction:column;justify-content:space-around;align-items:center;font-size:5em}section.light-list div div i{margin:0 1em}section.light-list div div i.yellow{color:yellow}section.light-list div div label label.btn.btn-default.active.toggle-off{background-color:black;color:white}section.light-list div div label span.toggle-handle.btn.btn-default{background-color:lightgrey}
+/*# sourceMappingURL=style.css.map */
