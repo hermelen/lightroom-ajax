@@ -1,10 +1,10 @@
 {% extends "light/base.html" %}
 {% block content %}
   <section class="light-list">
-      {% for light in object_list %}
-      <div id="{{ light.id }}-display">
-        <div>
-          {% if light.status == '0' %}
+      {% for obj in lights %}
+      <div id="div-{{ obj.light.id }}">
+        <div class="single-light-div">
+          {% if obj.light.status == '0' %}
           <i class="far fa-lightbulb"></i>
           <label class="checkbox-inline">
             <input data-toggle="toggle" type="checkbox">
@@ -12,11 +12,15 @@
           {% else %}
           <i class="fas fa-lightbulb yellow"></i>
           <label class="checkbox-inline">
-            <input data-toggle="toggle" type="checkbox" checked>
+            <input class="toggle" data-toggle="toggle" type="checkbox" checked>
           </label>
           {% endif %}
+          <form class="light-form" id="{{ obj.light.id }}" action="{% url 'light-switch' obj.light.id %}" method="post">
+            {% csrf_token %}
+            {{ obj.form.status }}
+            <button class="btn btn-success" type="submit" name="button">Seubmite</button>
+          </form>
         </div>
-        {# </form> #}
       </div>
       {% endfor %}
   </section>

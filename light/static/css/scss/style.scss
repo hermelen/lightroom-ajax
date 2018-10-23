@@ -8,13 +8,13 @@ section.light-list {
   flex-wrap: wrap;
   div {
     div {
-      height: 2em;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      font-size: 5em;
       i {
+        font-size: 5em;
+        height: 2em;
         margin: 0 1em;
       }
       i.yellow {
@@ -29,6 +29,16 @@ section.light-list {
         }
         span.toggle-handle.btn.btn-default {
           background-color: lightgrey;
+        }
+      }
+      form.light-form {
+        select {
+          option {
+            font-size: 1em;
+          }
+        }
+        select#id_status{
+          display: none;
         }
       }
     }

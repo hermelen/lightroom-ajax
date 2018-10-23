@@ -16,9 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from light.views import LightListView
+from light.views import LightListView, LightSwitchView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^light/(?P<pk>\d+)/switch/$', LightSwitchView.as_view(), name="light-switch"),
     url(r'^$', LightListView.as_view(), name='index'),
 ]
